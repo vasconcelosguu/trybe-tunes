@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Login from './pages/Login';
+import Search from './pages/Search';
+import Album from './pages/Album';
+import Favorites from './pages/Favorites';
+import Profile from './pages/Profile';
+import ProfileEdit from './pages/ProfileEdite';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <Route exact path="/profile/edit" component={ ProfileEdit } />
+        <Route exact path="/profile" component={ Profile } />
+        <Route exact path="/favorites" component={ Favorites } />
+        <Route exact path="/album/:id" component={ Album } />
+        <Route exact path="/search" component={ Search } />
+        <Route exact path="/trybe-tunes" component={ Login } />
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
