@@ -1,0 +1,29 @@
+.albumSong {
+  display: flex;
+  width: 25%;
+  max-width: 25%;
+  height: 25%;
+  max-width: 25%;
+  padding: 7px;
+  margin: 5px;
+  border-radius: 7px;
+  border: 1px solid black;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 4px 5px 60px rgba(0, 0, 0, 0.2);
+}
+
+.albumSong:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.linkSong {
+  text-decoration: none;
+  color: black;
+}
+
